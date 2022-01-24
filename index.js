@@ -77,12 +77,13 @@ function writeFileSync (file, obj, options = {}) {
   // not sure if fs.writeFileSync returns anything, but just in case
   return fs.writeFileSync(file, str, options)
 }
-
+const leerJson = readFileSync
 const jsonfile = {
   readFile,
   readFileSync,
   writeFile,
-  writeFileSync
+  writeFileSync,
+  leerJson
 }
 
 module.exports = jsonfile
